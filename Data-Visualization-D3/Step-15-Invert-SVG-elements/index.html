@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../d3.v7.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    svg {
+      background-color: pink;
+    }
+  </style>
+  <body>
+    <script>
+      const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+      const w = 500;
+      const h = 100;
+
+      const svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", w)
+        .attr("height", h);
+
+      svg
+        .selectAll("rect")
+        .data(dataset)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i * 30)
+        .attr("y", (d, i) => {
+          // Add your code below this line
+
+          return h - d * 3;
+
+          // Add your code above this line
+        })
+        .attr("width", 25)
+        .attr("height", (d, i) => 3 * d);
+    </script>
+  </body>
+</html>
+
+// Create an array of data values. // Each number represents the height of a
+future bar. const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9]; // Define the
+width and height of the SVG drawing area. const w = 500; const h = 100; //
+Select the body element from the HTML document. d3.select("body") // Create a
+new SVG element and place it inside the body. // // Before: //
+<body></body>
+// // After: //
+<body>
+  // <svg></svg> //
+</body>
+.append("svg") // Set the SVG width to 500 pixels. .attr("width", w) // Set the
+SVG height to 100 pixels. .attr("height", h); // Select all rectangle elements
+inside the SVG. // // Important: // The rectangles do NOT exist yet. // // This
+creates an empty selection that tells D3: // "I want to work with rectangle
+elements." svg.selectAll("rect") // Attach the dataset to the rectangle
+selection. // // D3 creates a connection between data and elements. // //
+Example: // 12 --> rectangle 1 // 31 --> rectangle 2 // 22 --> rectangle 3
+.data(dataset) // Creates an "enter selection." // // Since there are no
+rectangles yet, // D3 identifies that it needs to create new elements // for
+each piece of data. .enter() // Create a rectangle (<rect
+  >) for every data value. // // Since the dataset has 9 values, // D3 creates 9
+  rectangles. .append("rect") // Set the horizontal position of each rectangle.
+  // // d = current data value // i = index position in the array // // Example:
+  // First bar: // i = 0 --> x = 0 // // Second bar: // i = 1 --> x = 30 // //
+  Third bar: // i = 2 --> x = 60 // // This spaces the bars across the SVG.
+  .attr("x", (d, i) => i * 30) // Set the vertical position of each rectangle.
+  // // SVG coordinates start at the top: // // y = 0 (top) // y = 100 (bottom)
+  // // A rectangle normally grows downward. // // To make bars grow upward, we
+  subtract the height // from the SVG height. // // Example: // h = 100 // data
+  = 12 // // height = 12 * 3 = 36 // // y = 100 - 36 // y = 64 // // The
+  rectangle starts at 64 and ends at 100. .attr("y", (d, i) => h - d * 3) // Set
+  the width of every bar. // // Every rectangle will be 25 pixels wide.
+  .attr("width", 25) // Set the height of every bar based on the data value. //
+  // d = current data value // // Example: // // Data value: 12 // Height: 12 *
+  3 = 36 pixels // // Data value: 31 // Height: 31 * 3 = 93 pixels // // Larger
+  values create taller bars. .attr("height", (d, i) => 3 * d);</rect
+>

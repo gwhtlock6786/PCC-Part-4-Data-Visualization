@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../d3.v7.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    svg {
+      background-color: pink;
+      margin: 20px;
+      padding: 20px 0px 0px 0px;
+    }
+
+    .bar:hover {
+      fill: brown;
+    }
+  </style>
+  <body>
+    <script>
+      const positionData = [
+        [1, 7, -4],
+        [6, 3, 8],
+        [2, 9, 3],
+      ];
+      // Add your code below this line
+
+      const output = d3.max(positionData, (d) => d[2]); // Change this line
+
+      const output2 = d3.min(positionData, (d) => d[2]); // Change this line
+
+      // Add your code above this line
+
+      d3.select("body").append("h2").text("The maximum value is: "+output);
+      d3.select("body").append("h2").text("The minimum value is: "+output2);
+    </script>
+  </body>
+</html>
