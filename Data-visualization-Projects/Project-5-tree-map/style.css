@@ -1,0 +1,280 @@
+css
+/* ============================================================
+   GLOBAL PAGE STYLES
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f4f6f8;
+
+  color: #222;
+
+  text-align: center;
+}
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+#title {
+  margin: 0 0 10px;
+
+  font-size: 36px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+#description {
+  max-width: 800px;
+
+  margin: 0 auto 30px;
+
+  color: #555;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+/* ============================================================
+   CHART CONTAINER
+   ============================================================ */
+
+#chart-container {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  overflow-x: auto;
+
+  padding: 10px;
+}
+
+/* ============================================================
+   TREEMAP SVG
+   ============================================================ */
+
+#chart-container svg {
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================
+   TREEMAP TILES
+   ============================================================ */
+
+.tile {
+  cursor: pointer;
+
+  stroke: white;
+
+  stroke-width: 1px;
+
+  transition:
+    stroke 0.15s ease,
+    stroke-width 0.15s ease,
+    opacity 0.15s ease;
+}
+
+/* ============================================================
+   TILE HOVER
+   ============================================================ */
+
+.tile:hover {
+  stroke: #222;
+
+  stroke-width: 2px;
+
+  opacity: 0.85;
+}
+
+/* ============================================================
+   TILE LABELS
+   ============================================================ */
+
+.tile-label {
+  pointer-events: none;
+
+  fill: white;
+
+  font-size: 11px;
+
+  font-weight: bold;
+}
+
+/* ============================================================
+   TOOLTIP
+   ============================================================ */
+
+#tooltip {
+  position: absolute;
+
+  z-index: 1000;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  min-width: 190px;
+
+  padding: 12px 15px;
+
+  border-radius: 6px;
+
+  background-color: #222;
+
+  color: white;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  text-align: left;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  transition: opacity 0.15s ease;
+}
+
+/* ============================================================
+   TOOLTIP STRONG TEXT
+   ============================================================ */
+
+#tooltip strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 15px;
+}
+
+/* ============================================================
+   LEGEND CONTAINER
+   ============================================================ */
+
+#legend-container {
+  width: 100%;
+
+  margin-top: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* ============================================================
+   LEGEND TITLE
+   ============================================================ */
+
+#legend-container h2 {
+  margin: 0 0 15px;
+
+  font-size: 20px;
+}
+
+/* ============================================================
+   LEGEND SVG
+   ============================================================ */
+
+#legend {
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* ============================================================
+   LEGEND ITEMS
+   ============================================================ */
+
+.legend-item {
+  stroke: #555;
+
+  stroke-width: 0.5px;
+}
+
+/* ============================================================
+   LEGEND LABELS
+   ============================================================ */
+
+.legend-label {
+  fill: #333;
+
+  font-size: 12px;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 900px) {
+  body {
+    padding: 15px;
+  }
+
+  #title {
+    font-size: 28px;
+  }
+
+  #description {
+    font-size: 14px;
+  }
+
+  #chart-container {
+    justify-content: flex-start;
+  }
+
+  #chart-container svg {
+    min-width: 1000px;
+  }
+}
+
+/* ============================================================
+   SMALL SCREENS
+   ============================================================ */
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  #title {
+    font-size: 24px;
+  }
+
+  #description {
+    font-size: 13px;
+  }
+
+  #legend-container {
+    overflow-x: auto;
+  }
+}

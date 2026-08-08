@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cyclist Scatterplot</title>
+
+    <!-- D3.js library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main id="chart-container">
+      <!-- Chart title -->
+      <h1 id="title">Doping in Professional Bicycle Racing</h1>
+
+      <!-- Chart subtitle -->
+      <p id="subtitle">Fastest times up Alpe d'Huez</p>
+
+      <!-- D3 will create the scatterplot inside this SVG -->
+      <svg id="chart"></svg>
+
+      <!-- Legend required by the FCC tests -->
+      <div id="legend">
+        <div class="legend-item">
+          <span class="legend-color no-doping"></span>
+          No doping allegations
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color doping"></span>
+          Doping allegations
+        </div>
+      </div>
+
+      <!-- Tooltip appears when hovering over a dot -->
+      <div id="tooltip"></div>
+    </main>
+
+    <!-- Our custom JavaScript -->
+    <!-- <script src="script.js"></script> -->
+    <script src="local-data-version.js"></script>
+  </body>
+</html>

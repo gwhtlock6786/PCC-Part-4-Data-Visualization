@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+}
+
+#chart-container {
+  position: relative;
+  width: 1100px;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#title {
+  margin: 0;
+  text-align: center;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+#subtitle {
+  margin: 8px 0 25px;
+  text-align: center;
+  color: #475569;
+  font-size: 16px;
+}
+
+#chart {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------------
+SCATTERPLOT DOTS
+------------------------------------------------------------ */
+
+.dot {
+  stroke: #0f172a;
+  stroke-width: 1px;
+  opacity: 0.85;
+}
+
+.dot.no-doping {
+  fill: #2563eb;
+}
+
+.dot.doping {
+  fill: #dc2626;
+}
+
+.dot:hover {
+  stroke: #0f172a;
+  stroke-width: 2px;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------
+AXES
+------------------------------------------------------------ */
+
+.axis path,
+.axis line {
+  stroke: #334155;
+}
+
+.tick text {
+  fill: #334155;
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------
+LEGEND
+------------------------------------------------------------ */
+
+#legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.legend-color.no-doping {
+  background-color: #2563eb;
+}
+
+.legend-color.doping {
+  background-color: #dc2626;
+}
+
+/* ------------------------------------------------------------
+TOOLTIP
+------------------------------------------------------------ */
+
+#tooltip {
+  position: absolute;
+
+  padding: 12px 16px;
+
+  background-color: #0f172a;
+  color: white;
+
+  border-radius: 6px;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+  transition: opacity 0.15s ease;
+}
+
+/* ------------------------------------------------------------
+RESPONSIVE DESIGN
+------------------------------------------------------------ */
+
+@media (max-width: 1150px) {
+  #chart-container {
+    width: 95%;
+    overflow-x: auto;
+  }
+}

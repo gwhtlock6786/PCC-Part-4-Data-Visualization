@@ -1,0 +1,63 @@
+html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Global Temperature Heat Map</title>
+
+    <!-- Local D3 library -->
+    <script src="../d3.v7.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         CHART TITLE
+         ===================================================== -->
+
+    <h1 id="title">Monthly Global Land-Surface Temperature</h1>
+
+    <!-- =====================================================
+         CHART DESCRIPTION
+         ===================================================== -->
+
+    <p id="description">
+      Monthly global land-surface temperatures from 1753 to 2015.
+    </p>
+
+    <!-- =====================================================
+         MAIN CHART CONTAINER
+         ===================================================== -->
+
+    <div id="chart-container">
+      <!-- D3 will create the SVG here -->
+    </div>
+
+    <!-- =====================================================
+         TOOLTIP
+         ===================================================== -->
+
+    <div id="tooltip"></div>
+
+    <!-- =====================================================
+         LEGEND
+         ===================================================== -->
+
+    <div id="legend-container">
+      <h2>Temperature Legend</h2>
+
+      <!-- D3 will create the legend SVG here -->
+    </div>
+
+    <!-- =====================================================
+         OUR JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

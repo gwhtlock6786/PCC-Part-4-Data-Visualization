@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>US GDP Bar Chart</title>
+
+    <!-- D3.js library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="chart-container">
+      <!-- Chart title -->
+      <h1 id="title">United States GDP</h1>
+
+      <!-- D3 will create the chart inside this SVG -->
+      <svg id="chart"></svg>
+
+      <!-- Tooltip will appear when hovering over a bar -->
+      <div id="tooltip"></div>
+    </div>
+
+    <!-- Our custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

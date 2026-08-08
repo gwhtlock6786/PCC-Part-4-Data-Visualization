@@ -1,0 +1,67 @@
+html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>US Education Choropleth Map</title>
+
+    <!-- Local D3 library -->
+    <script src="../d3.v7.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         TITLE
+         ===================================================== -->
+
+    <h1 id="title">US Educational Attainment</h1>
+
+    <!-- =====================================================
+         DESCRIPTION
+         ===================================================== -->
+
+    <p id="description">
+      Percentage of adults age 25 and older with a bachelor's degree or higher,
+      by county.
+    </p>
+
+    <!-- =====================================================
+         MAP CONTAINER
+         ===================================================== -->
+
+    <div id="map-container">
+      <!-- D3 will create the SVG map here -->
+    </div>
+
+    <!-- =====================================================
+         TOOLTIP
+         ===================================================== -->
+
+    <div id="tooltip"></div>
+
+    <!-- =====================================================
+         LEGEND CONTAINER
+         ===================================================== -->
+
+    <div id="legend-container">
+      <h2>Educational Attainment</h2>
+
+      <!-- D3 will create the legend here -->
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <!-- <script src="script.js"></script> -->
+    <script src="local-data-version.js"></script>
+  </body>
+</html>
